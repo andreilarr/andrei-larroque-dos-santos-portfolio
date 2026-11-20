@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const canonical = new URL(base, Astro.site);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10251e" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.toString()} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: dark;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #f4f5ef;
+    background: #10251e;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --ink: #f4f5ef;
+    --muted: #bdc8ba;
+    --surface: #1a342a;
+    --line: #365447;
+    --lime: #c5f36c;
+    --orange: #f5a86b;
+    --wrap: 1120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { min-width: 320px; margin: 0; background: radial-gradient(ellipse at 90% -18rem, #284b39 0, #10251e 51rem); }
+  a { color: var(--lime); text-underline-offset: .23em; }
+  a:hover { color: #e0ffa1; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; border-radius: .2rem; }
+  ::selection { color: #10251e; background: var(--lime); }
+  .skip-link { position: fixed; z-index: 20; top: 1rem; left: 1rem; padding: .8rem 1rem; transform: translateY(-160%); border-radius: .65rem; background: var(--lime); color: #10251e; font-weight: 750; }
+  .skip-link:focus { transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  }
+</style>

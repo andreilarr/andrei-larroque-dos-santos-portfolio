@@ -1,0 +1,231 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const description = "Portfólio de Andrei Larroque dos Santos: projetos independentes em desenvolvimento web e jogos.";
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<SiteLayout title="Andrei Larroque dos Santos — Portfólio" {description}>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href={base} aria-label="Andrei Larroque dos Santos, início">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>Andrei <b>Larroque</b></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow"><span aria-hidden="true"></span> Desenvolvimento web · Jogos independentes</p>
+        <h1 id="hero-title">Andrei Larroque <span>dos Santos.</span></h1>
+        <p class="hero-lead">Desenvolvedor independente construindo projetos web e jogos. Aqui compartilho o que estou criando, as ideias por trás de cada projeto e o que aprendo no caminho.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/andreilarr" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="frame"></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="monogram">A<span>.</span></div>
+        <div class="art-note note-one">WEB / 01</div><div class="art-note note-two">GAMES / 02</div>
+        <div class="art-line"></div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projetos" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">Trabalho em andamento</p><h2 id="projects-title">Projetos selecionados</h2></div>
+          <p>Projetos autorais em diferentes etapas. Cada página e link indica o estado atual.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card match-card">
+            <div class="project-art match-art" aria-hidden="true">
+              <div class="tile-grid"><i>◆</i><i>●</i><i>✦</i><i>●</i><i>◆</i><i>✦</i><i>✦</i><i>◆</i><i>●</i></div>
+              <span class="art-index">01 / ANDROID</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span class="status status-lime"><i></i> Em desenvolvimento</span><span>Jogo</span></div>
+              <h3>Matchzada</h3>
+              <p>Jogo de combinar peças em desenvolvimento para Android. Um projeto para explorar mecânicas de puzzle e criar uma experiência clara em dispositivos móveis.</p>
+              <a href="https://cloudyarc-games.github.io/" target="_blank" rel="noopener noreferrer">Conhecer na CloudyArc Games <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card hero-card">
+            <div class="project-art just-art" aria-hidden="true">
+              <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="figure"><i></i><b></b></div>
+              <span class="art-index">02 / HTML5</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span class="status status-orange"><i></i> Protótipo jogável</span><span>Jogo</span></div>
+              <h3>Just a Hero</h3>
+              <p>Protótipo de jogo para navegador. A página no itch.io permite experimentar o projeto no estado atual.</p>
+              <a href="https://andreilarr.itch.io/just-a-hero" target="_blank" rel="noopener noreferrer">Jogar no itch.io <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section wrap" id="sobre" aria-labelledby="about-title">
+      <div class="about-label"><span>01</span><span>Sobre mim</span></div>
+      <div class="about-content">
+        <p class="eyebrow">Curiosidade que vira projeto</p>
+        <h2 id="about-title">Gosto de aprender construindo.</h2>
+        <p>Meu trabalho reúne desenvolvimento web e criação de jogos. No momento, avanço projetos autorais enquanto aprofundo conhecimentos em Astro, TypeScript, HTML e CSS — e continuo desenvolvendo jogos com Godot.</p>
+        <div class="skill-list" aria-label="Tecnologias usadas nos projetos">
+          <span>Astro</span><span>TypeScript</span><span>HTML &amp; CSS</span><span>Godot</span><span>GDScript</span><span>Git</span>
+        </div>
+        <p class="skills-note">Tecnologias aparecem aqui como ferramentas aplicadas nos projetos, sem notas de proficiência.</p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <div>
+          <p class="eyebrow">Vamos conversar</p>
+          <h2 id="contact-title">Acompanhe o trabalho.</h2>
+          <p>Veja os projetos e o código público nos meus perfis.</p>
+        </div>
+        <div class="contact-links">
+          <a class="button button-primary" href="https://github.com/andreilarr" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="https://andreilarr.itch.io/" target="_blank" rel="noopener noreferrer">itch.io <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand footer-brand" href={base}><span class="brand-mark" aria-hidden="true">A</span><span>Andrei <b>Larroque</b></span></a>
+      <p>Projetos, experimentos e aprendizados.</p>
+      <small>© 2026 Andrei Larroque dos Santos</small>
+    </div>
+  </footer>
+</SiteLayout>
+
+<style>
+  .wrap { width: min(100% - 2.5rem, var(--wrap)); margin-inline: auto; }
+  .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid rgb(197 243 108 / 12%); background: rgb(16 37 30 / 89%); backdrop-filter: blur(16px); }
+  .header-inner { width: min(100% - 2.5rem, var(--wrap)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--ink); font-size: .94rem; font-weight: 760; letter-spacing: -.025em; text-decoration: none; }
+  .brand b { color: var(--lime); }
+  .brand-mark { display: grid; width: 2rem; height: 2rem; place-items: center; border-radius: .65rem; background: var(--lime); color: #10251e; font-weight: 900; }
+  nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); }
+  nav a { color: var(--muted); font-size: .9rem; font-weight: 600; text-decoration: none; }
+  nav a:hover { color: var(--ink); }
+  .hero { min-height: 610px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 2rem; padding-block: 5rem; }
+  .hero-content { position: relative; z-index: 1; }
+  .eyebrow { display: flex; align-items: center; gap: .65rem; margin: 0 0 1rem; color: var(--lime); font-size: .72rem; font-weight: 820; letter-spacing: .15em; text-transform: uppercase; }
+  .eyebrow > span { width: .48rem; height: .48rem; border-radius: 50%; background: var(--orange); }
+  h1, h2, h3, p { margin-top: 0; }
+  h1 { max-width: 720px; margin-bottom: 1.3rem; font-size: clamp(3.2rem, 7vw, 6rem); font-weight: 780; letter-spacing: -.08em; line-height: .96; }
+  h1 span { color: var(--lime); }
+  .hero-lead { max-width: 34rem; color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.18rem); line-height: 1.75; }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.3rem; margin-top: 1.7rem; }
+  .button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 48px; padding: .8rem 1.15rem; border: 1px solid transparent; border-radius: .7rem; font-size: .9rem; font-weight: 760; text-decoration: none; transition: transform .18s ease, background-color .18s ease, border-color .18s ease; }
+  .button:hover { transform: translateY(-2px); }
+  .button-primary { background: var(--lime); color: #10251e; }
+  .button-primary:hover { background: #dcffa1; color: #10251e; }
+  .button-outline { border-color: #587363; color: var(--ink); background: rgb(255 255 255 / 3%); }
+  .button-outline:hover { border-color: var(--lime); background: rgb(197 243 108 / 8%); color: white; }
+  .text-link { font-size: .9rem; font-weight: 680; }
+  .hero-art { position: relative; min-height: 370px; display: grid; place-items: center; isolation: isolate; }
+  .frame { position: absolute; inset: 9% 5%; border: 1px solid rgb(197 243 108 / 20%); border-radius: 48% 52% 43% 57% / 55% 43% 57% 45%; transform: rotate(-15deg); }
+  .orbit { position: absolute; width: 110%; aspect-ratio: 1; border: 1px solid rgb(197 243 108 / 17%); border-radius: 50%; transform: rotate(-22deg) scaleY(.43); }
+  .orbit-b { transform: rotate(41deg) scaleY(.47); border-color: rgb(245 168 107 / 22%); }
+  .monogram { display: grid; width: min(60%, 240px); aspect-ratio: 1; place-items: center; border: 1px solid #719267; border-radius: 2.2rem; background: linear-gradient(145deg, #284b39, #1a342a); box-shadow: 0 30px 80px rgb(0 0 0 / 27%); color: var(--ink); font-size: clamp(7rem, 15vw, 11rem); font-weight: 850; letter-spacing: -.12em; line-height: 1; transform: rotate(-7deg); }
+  .monogram span { color: var(--lime); }
+  .art-note { position: absolute; padding: .55rem .7rem; border: 1px solid #567363; border-radius: .35rem; background: #152c23; color: var(--lime); font-size: .67rem; font-weight: 820; letter-spacing: .12em; }
+  .note-one { top: 16%; right: 4%; transform: rotate(7deg); }
+  .note-two { bottom: 13%; left: 4%; color: var(--orange); transform: rotate(-8deg); }
+  .art-line { position: absolute; right: 12%; bottom: 20%; width: 1px; height: 68px; background: var(--orange); transform: rotate(30deg); }
+  .projects-section { padding: 5.6rem 0 6rem; border-block: 1px solid rgb(197 243 108 / 10%); background: linear-gradient(180deg, rgb(26 52 42 / 68%), rgb(18 39 31 / 83%)); }
+  .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.2rem; }
+  .section-heading .eyebrow { margin-bottom: .65rem; }
+  .section-heading h2, .about-content h2, .contact-inner h2 { margin-bottom: 0; font-size: clamp(2rem, 4vw, 3.15rem); letter-spacing: -.06em; line-height: 1.08; }
+  .section-heading > p { max-width: 350px; margin-bottom: .1rem; color: var(--muted); line-height: 1.65; }
+  .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.35rem; }
+  .project-card { overflow: hidden; border: 1px solid var(--line); border-radius: 1.15rem; background: var(--surface); }
+  .project-art { position: relative; display: grid; min-height: 230px; place-items: center; overflow: hidden; }
+  .match-art { background: radial-gradient(ellipse at 73% 26%, #628a58 0, #355640 34%, #1c382c 78%); }
+  .tile-grid { display: grid; grid-template-columns: repeat(3, 54px); gap: 8px; transform: rotate(-9deg); filter: drop-shadow(0 20px 24px rgb(0 0 0 / 25%)); }
+  .tile-grid i { display: grid; width: 54px; aspect-ratio: 1; place-items: center; border: 1px solid rgb(255 255 255 / 45%); border-radius: 14px; background: linear-gradient(145deg, #e3ffc3, #83b675); color: #264530; font-size: 1.6rem; font-style: normal; }
+  .tile-grid i:nth-child(3n + 2) { background: linear-gradient(145deg, #c2f2e3, #65a88e); }
+  .tile-grid i:nth-child(3n) { background: linear-gradient(145deg, #ffe0af, #d38e63); }
+  .just-art { background: linear-gradient(155deg, #3b3448, #88545e 55%, #cd9369); }
+  .sun { position: absolute; top: 15%; right: 22%; width: 74px; aspect-ratio: 1; border-radius: 50%; background: #ffd9a1; box-shadow: 0 0 48px rgb(255 217 161 / 43%); }
+  .hill { position: absolute; bottom: -30%; width: 115%; height: 75%; clip-path: polygon(0 100%, 34% 0, 53% 59%, 68% 22%, 100% 100%); }
+  .hill-back { background: #554353; transform: translateX(-10%); }
+  .hill-front { height: 48%; background: #28382d; transform: translateX(8%); }
+  .figure { position: absolute; bottom: 29%; left: 50%; width: 12px; height: 31px; border-radius: 8px; background: #19291f; transform: translateX(-50%); }
+  .figure::before { position: absolute; top: -10px; left: 1px; width: 10px; height: 10px; border-radius: 50%; background: #19291f; content: ""; }
+  .figure i, .figure b { position: absolute; top: 16px; width: 3px; height: 18px; background: #19291f; }
+  .figure i { left: 2px; transform: rotate(20deg); }
+  .figure b { right: 2px; transform: rotate(-20deg); }
+  .art-index { position: absolute; right: 1rem; bottom: 1rem; color: rgb(255 255 255 / 82%); font-size: .66rem; font-weight: 840; letter-spacing: .17em; }
+  .project-copy { padding: 1.3rem 1.35rem 1.45rem; }
+  .project-meta { display: flex; justify-content: space-between; gap: 1rem; color: #afbcad; font-size: .76rem; }
+  .status { display: inline-flex; align-items: center; gap: .45rem; font-weight: 730; }
+  .status i { width: .45rem; height: .45rem; border-radius: 50%; background: currentColor; }
+  .status-lime { color: var(--lime); }
+  .status-orange { color: var(--orange); }
+  .project-copy h3 { margin: 1.05rem 0 .55rem; font-size: 1.45rem; letter-spacing: -.04em; }
+  .project-copy p { min-height: 4.6rem; margin-bottom: 1.1rem; color: var(--muted); font-size: .92rem; line-height: 1.7; }
+  .project-copy > a { font-size: .88rem; font-weight: 750; text-decoration: none; }
+  .about-section { display: grid; grid-template-columns: .55fr 1.45fr; gap: 3rem; padding-block: 6.3rem; }
+  .about-label { display: flex; align-items: center; gap: .8rem; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .about-label span:first-child { color: var(--orange); }
+  .about-content .eyebrow { margin-bottom: .7rem; }
+  .about-content > p:not(.eyebrow):not(.skills-note) { max-width: 730px; margin: 1.1rem 0 1.5rem; color: var(--muted); font-size: 1.04rem; line-height: 1.8; }
+  .skill-list { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .skill-list span { padding: .55rem .75rem; border: 1px solid #496454; border-radius: 99px; background: rgb(26 52 42 / 65%); color: #d9e4d4; font-size: .78rem; font-weight: 670; }
+  .skills-note { margin: .85rem 0 0; color: #a9b7a7; font-size: .78rem; }
+  .contact-section { border-block: 1px solid rgb(197 243 108 / 12%); background: #1a342a; }
+  .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 3rem; }
+  .contact-inner .eyebrow { margin-bottom: .6rem; }
+  .contact-inner h2 { font-size: clamp(1.8rem, 3vw, 2.45rem); }
+  .contact-inner p:last-child { margin: .65rem 0 0; color: var(--muted); line-height: 1.6; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: .8rem; }
+  .site-footer { background: #0b1b15; }
+  .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: .8rem 2rem; padding-block: 1.7rem; }
+  .footer-inner > p { margin: 0; color: #a9b7a7; font-size: .82rem; }
+  .footer-inner small { grid-column: 1 / -1; margin-top: .7rem; padding-top: 1rem; border-top: 1px solid #2b4538; color: #9aaa96; font-size: .75rem; }
+  @media (max-width: 780px) {
+    .hero { min-height: 0; grid-template-columns: 1fr; padding-block: 4.2rem 3rem; }
+    .hero-art { min-height: 300px; }
+    .about-section { grid-template-columns: .35fr 1.65fr; gap: 1.5rem; }
+  }
+  @media (max-width: 580px) {
+    .wrap, .header-inner { width: min(100% - 2rem, var(--wrap)); }
+    .header-inner { min-height: 68px; flex-wrap: wrap; gap: .65rem; padding-block: .65rem; }
+    .brand { gap: .5rem; font-size: .81rem; }
+    .brand-mark { width: 1.8rem; height: 1.8rem; }
+    nav { width: 100%; justify-content: space-between; gap: .8rem; }
+    nav a { font-size: .76rem; }
+    .hero { overflow: hidden; padding-block: 3.5rem 2.7rem; }
+    .hero-content { min-width: 0; }
+    h1 { max-width: 100%; overflow-wrap: anywhere; font-size: clamp(2.9rem, 13vw, 4.4rem); }
+    .hero-lead { overflow-wrap: anywhere; }
+    .hero-art { min-width: 0; min-height: 265px; overflow: hidden; }
+    .section-heading { display: block; }
+    .section-heading > p { margin-top: .8rem; }
+    .project-grid { grid-template-columns: 1fr; }
+    .project-art { min-height: 210px; }
+    .project-copy p { min-height: 0; }
+    .about-section { grid-template-columns: 1fr; gap: 1.4rem; padding-block: 4.5rem; }
+    .contact-inner { align-items: flex-start; flex-direction: column; padding-block: 2.5rem; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-inner small { grid-column: 1; }
+  }
+</style>
